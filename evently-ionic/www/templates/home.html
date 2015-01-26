@@ -1,0 +1,33 @@
+<ion-view view-title="Home">
+    <ion-nav-bar class="bar-positive">
+        <ion-nav-back-button></ion-nav-back-button>
+        <ion-nav-buttons>
+            <button type="button" class="button icon ion-navicon" menu-toggle="left"></button>
+            <button type="button" class="button icon ion-navicon item-button-right" ng-click="openModal()"></button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="group in groups">
+                <div class="item-content">
+                    {{group.title}}
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <script id="add-group.html" type="text/ng-template">
+        <ion-modal-view>
+            <ion-header-bar>
+                <h1 class="title">Add new group</h1>
+            </ion-header-bar>
+            <ion-content>
+                <ion-item class="item-input">
+                    <input type="text" ng-model="title">
+                </ion-item>
+                <ion-item>
+                    <button class="button button-block">Add</button>
+                </ion-item>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+</ion-view>
